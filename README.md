@@ -67,6 +67,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any questions or suggestions, feel free to open an issue or contact me directly!
 
-```sh
-I hereby disclaim any responsibility for any consequences arising from the use of this material or service. The user is solely responsible for their actions.P code
-```
+> I hereby disclaim any responsibility for any consequences arising from the use of this material or service. The user is solely responsible for their actions.
